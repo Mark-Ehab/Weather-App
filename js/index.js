@@ -17,8 +17,8 @@ const forcastTableInfoRow = document.querySelector(
   "#weather-forecast-table .container > .row"
 );
 /************************General Variables************************/
-const ipAPIBaseURL = "http://ip-api.com/json";
-const weatherApiBaseURL = "http://api.weatherapi.com/v1";
+const ipAPIBaseURL = "https://ip-api.com/json";
+const weatherApiBaseURL = "https://api.weatherapi.com/v1";
 const weatherApiKeyQueryParam = "4b5bf409715d418f8e0182853252906";
 
 /*========================================================================================*/
