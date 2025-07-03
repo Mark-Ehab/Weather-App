@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Site Meta Data -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Smart login system." />
+    <!-- Site Title -->
+    <title>Weather</title>
+    <!-- Link Favicon to Site Head -->
+    <link rel="icon" href="./image/logo@2x.png" />
+    <!-- Link Fontawesome External Styles -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- Link Bootsrtap External Styles -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- Link Custom External Styles -->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <!-- Link Media Query External Styles -->
+    <link rel="stylesheet" href="./CSS/media.css" />
+  </head>
+  <body>
+    <!-- Start of Nav Bar Section -->
+    <nav id="navbar" class="navbar navbar-custom navbar-expand-lg">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-center align-items-center"
+          href="index.html"
+        >
+          <figure class="m-0">
+            <img
+              src="./image/logo@2x.png"
+              alt="Weather Logo"
+              class="img-fluid"
+            />
+          </figure>
+          <div class="slogan d-flex flex-column">
+            <h1>Weather</h1>
+            <span>tagline goes here</span>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler d-flex justify-content-center align-items-center d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="fa-solid fa-bars fa-xs"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 rounded rounded-4">
+            <li class="nav-item">
+              <a
+                class="nav-link btn rounded-pill active"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn rounded-pill" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn rounded-pill" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn rounded-pill" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn rounded-pill" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Nav Bar Section -->
+
+    <!-- Start of Main Section -->
+    <main class="position-relative">
+      <!-- Start of Hero Section -->
+      <header id="hero" class="position-relative">
+        <div class="container position-relative">
+          <input
+            id="location-seacrh"
+            type="text"
+            placeholder="Find your location..."
+            name="name"
+            class="w-100 rounded-pill border-0"
+          />
+          <button type="button" class="btn btn-find rounded-pill">Find</button>
+        </div>
+      </header>
+      <!-- End of Hero Section -->
+
+      <!-- Start of Weather Forecast Table Section -->
+      <section
+        id="weather-forecast-table"
+        class="position-relative bottom-50 w-100"
+      >
+        <div class="container">
+          <div class="row gx-0 rounded-3 overflow-hidden">
+            <div class="col-12 col-lg-4">
+              <div class="inner" id="today-weather">
+                <header class="d-flex justify-content-between">
+                  <span id="first-day-name">Tuesday</span>
+                  <span id="first-day-date">1July</span>
+                </header>
+                <article>
+                  <span id="location" class="d-block">Cairo</span>
+                  <div class="row align-items-center">
+                    <div class="col-sm-6 col-lg-12">
+                      <div class="inner">
+                        <span id="first-day-temp" class="d-block text-white"
+                          >29.1&deg;C</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-12">
+                      <div class="inner">
+                        <figure
+                          class="mb-0 d-flex justify-content-sm-center justify-content-lg-start"
+                        >
+                          <img
+                            src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                            alt=""
+                            class="first-day-condition-img"
+                          />
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="condition">Sunny</span>
+                  <div id="humidity-wind-compass" class="d-flex">
+                    <figure class="mb-0">
+                      <img src="./image/icon-umberella@2x.png" alt="" />
+                      <span>20%</span>
+                    </figure>
+
+                    <figure class="mb-0">
+                      <img src="./image/icon-wind@2x.png" alt="" />
+                      <span>18km/h</span>
+                    </figure>
+
+                    <figure class="mb-0">
+                      <img src="./image/icon-compass@2x.png" alt="" />
+                      <span>East</span>
+                    </figure>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="inner" id="tomorrow-weather">
+                <header class="d-flex justify-content-center">
+                  <span id="second-day-name">Wednesday</span>
+                </header>
+                <article class="text-center">
+                  <figure>
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                      alt=""
+                      class="second-day-condition-img"
+                    />
+                  </figure>
+                  <span id="second-day-ht" class="d-block text-white"
+                    >29.1&deg;C</span
+                  >
+                  <span id="second-day-lt" class="d-block">24.8&deg;</span>
+                  <span class="condition">Sunny</span>
+                </article>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="inner" id="day-after-tomorrow-weather">
+                <header class="d-flex justify-content-center">
+                  <span id="third-day-name">Thursday</span>
+                </header>
+                <article class="text-center">
+                  <figure>
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                      alt=""
+                      class="third-day-condition-img"
+                    />
+                  </figure>
+                  <span id="third-day-ht" class="d-block text-white"
+                    >29.1&deg;C</span
+                  >
+                  <span id="third-day-lt" class="d-block">24.8&deg;</span>
+                  <span class="condition">Sunny</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Weather Forecast Table Section -->
+
+      <!-- Start of Footer Section -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row gy-3">
+            <div class="col-12 col-lg-8 position-relative">
+              <div class="inner">
+                <input
+                  type="email"
+                  placeholder="Enter your email to subscribe..."
+                  name="email"
+                  class="w-100 rounded-pill border-0"
+                />
+                <button type="button" class="btn btn-subscribe rounded-pill">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div
+                class="inner h-100 d-flex justify-content-lg-center align-items-center"
+              >
+                <ul class="icons-list list-unstyled d-flex m-0 gap-2">
+                  <li>
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.x.com"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-google-plus-g"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.pinterest.com"
+                      target="_blank"
+                      class="text-decoration-none"
+                      ><i class="fa-brands fa-pinterest"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="mt-4">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </footer>
+      <!-- End of Footer Section -->
+    </main>
+    <!-- End of Main Section -->
+
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
