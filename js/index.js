@@ -17,7 +17,8 @@ const forcastTableInfoRow = document.querySelector(
   "#weather-forecast-table .container > .row"
 );
 /************************General Variables************************/
-const ipAPIBaseURL = "https://ip-api.com/json";
+const ipAPIBaseURL = "https://api.ipgeolocation.io/v2/ipgeo";
+const ipAPIKeyQueryParam = "336d9bcc163e4f87ae9ca39326cf4596";
 const weatherApiBaseURL = "https://api.weatherapi.com/v1";
 const weatherApiKeyQueryParam = "4b5bf409715d418f8e0182853252906";
 
@@ -35,12 +36,14 @@ const weatherApiKeyQueryParam = "4b5bf409715d418f8e0182853252906";
 async function getUserCurrentGeoLocation() {
   try {
     /* Start Fetching Data */
-    const response = await fetch(`${ipAPIBaseURL}`);
+    const response = await fetch(
+      `${ipAPIBaseURL}?apiKey=${ipAPIKeyQueryParam}`
+    );
     /* Check status of returned response */
     if (response.ok) {
       /* Get Response Data */
       const data = await response.json();
-      const { city } = data;
+      const { city } = data.location;
       return new Promise((resolve) => {
         resolve();
       }).then(() => city);
@@ -267,10 +270,17 @@ function displayForecastData(forecastData) {
 /* Apply click event on find button */
 findBtn.addEventListener("click", async () => {
   /* Get forecast weather data for three days including current day */
-  const forecastForNextThreeDays = await getWeatherForecastData(
+  let forecastForNextThreeDays = await getWeatherForecastData(
     3,
     locationSearchInputField.value
   );
+  if (!forecastForNextThreeDays) {
+    /* Get forecast date up to three days for user's current geolocation by default */
+    forecastForNextThreeDays = await getWeatherForecastData(
+      3,
+      await getUserCurrentGeoLocation()
+    );
+  }
   /* Display forecast data on forecast table */
   displayForecastData(forecastForNextThreeDays);
 });
