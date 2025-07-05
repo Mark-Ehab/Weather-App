@@ -267,7 +267,7 @@ function displayForecastData(forecastData) {
 /*--------------------------------------------- 
 # Event Listeners Definition and Implementation
 ----------------------------------------------*/
-/* Apply click event on find button */
+/* Apply click event listener on find button */
 findBtn.addEventListener("click", async () => {
   /* Get forecast weather data for three days including current day */
   let forecastForNextThreeDays = await getWeatherForecastData(
@@ -284,7 +284,8 @@ findBtn.addEventListener("click", async () => {
   /* Display forecast data on forecast table */
   displayForecastData(forecastForNextThreeDays);
 });
-/* Apply keydown event on location search input field */
+
+/* Apply keydown event listener on location search input field */
 locationSearchInputField.addEventListener("keydown", async (event) => {
   if (event.key === "Enter") {
     /* Get forecast weather data for three days including current day */
@@ -303,12 +304,12 @@ locationSearchInputField.addEventListener("keydown", async (event) => {
     displayForecastData(forecastForNextThreeDays);
   }
 });
-/*========================================================================================*/
-/*--------------------------------------- 
-# App Entry Point
-----------------------------------------*/
 
-(async () => {
+/* Apply DOMContentLoaded event listener on document */
+document.addEventListener("DOMContentLoaded", async () => {
+  /*-----------------
+  # App Entry Point #
+  ------------------*/
   /* Get user current geolocation */
   const userCurrentGeoLocation = await getUserCurrentGeoLocation();
 
@@ -320,4 +321,5 @@ locationSearchInputField.addEventListener("keydown", async (event) => {
 
   /* Display forecast data on forecast table */
   displayForecastData(forecastForNextThreeDays);
-})();
+});
+/*========================================================================================*/
