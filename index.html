@@ -5,7 +5,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Smart login system." />
+    <meta
+      name="description"
+      content="A system to get the temprature forecast data for three days including current day for a specific location "
+    />
     <!-- Site Title -->
     <title>Weather</title>
     <!-- Link Favicon to Site Head -->
@@ -61,7 +64,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link btn rounded-pill" href="#">News</a>
+              <a class="nav-link btn rounded-pill" href="#" target="_self"
+                >News</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link btn rounded-pill" href="#">Live Cameras</a>
@@ -70,7 +75,12 @@
               <a class="nav-link btn rounded-pill" href="#">Photos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn rounded-pill" href="#">Contact</a>
+              <a
+                class="nav-link btn rounded-pill"
+                href="contact.html"
+                target="_self"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -79,7 +89,7 @@
     <!-- End of Nav Bar Section -->
 
     <!-- Start of Main Section -->
-    <main class="position-relative">
+    <main id="main-section" class="position-relative">
       <!-- Start of Hero Section -->
       <header id="hero" class="position-relative">
         <div class="container position-relative">
@@ -105,74 +115,73 @@
         </div>
       </section>
       <!-- End of Weather Forecast Table Section -->
-
-      <!-- Start of Footer Section -->
-      <footer id="footer">
-        <div class="container">
-          <div class="row gy-3">
-            <div class="col-12 col-lg-8 position-relative">
-              <div class="inner">
-                <input
-                  type="email"
-                  placeholder="Enter your email to subscribe..."
-                  name="email"
-                  class="w-100 rounded-pill border-0"
-                />
-                <button type="button" class="btn btn-subscribe rounded-pill">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div
-                class="inner h-100 d-flex justify-content-lg-center align-items-center"
-              >
-                <ul class="icons-list list-unstyled d-flex m-0 gap-2">
-                  <li>
-                    <a
-                      href="https://www.facebook.com"
-                      target="_blank"
-                      class="text-decoration-none"
-                      ><i class="fa-brands fa-facebook-f"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.x.com"
-                      target="_blank"
-                      class="text-decoration-none"
-                      ><i class="fa-brands fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.google.com"
-                      target="_blank"
-                      class="text-decoration-none"
-                      ><i class="fa-brands fa-google-plus-g"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.pinterest.com"
-                      target="_blank"
-                      class="text-decoration-none"
-                      ><i class="fa-brands fa-pinterest"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <p class="mt-4">
-            Copyright 2014 Company name. Designed by Themezy. All rights
-            reserved
-          </p>
-        </div>
-      </footer>
-      <!-- End of Footer Section -->
     </main>
     <!-- End of Main Section -->
+
+    <!-- Start of Footer Section -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-12 col-lg-8 position-relative">
+            <div class="inner">
+              <input
+                type="email"
+                placeholder="Enter your email to subscribe..."
+                name="email"
+                class="w-100 rounded-pill border-0"
+              />
+              <button type="button" class="btn btn-subscribe rounded-pill">
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div
+              class="inner h-100 d-flex justify-content-lg-center align-items-center"
+            >
+              <ul class="icons-list list-unstyled d-flex m-0 gap-2">
+                <li>
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    class="text-decoration-none"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.x.com"
+                    target="_blank"
+                    class="text-decoration-none"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.google.com"
+                    target="_blank"
+                    class="text-decoration-none"
+                    ><i class="fa-brands fa-google-plus-g"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pinterest.com"
+                    target="_blank"
+                    class="text-decoration-none"
+                    ><i class="fa-brands fa-pinterest"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4">
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <!-- End of Footer Section -->
 
     <script src="./js/index.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>

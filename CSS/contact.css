@@ -1,7 +1,6 @@
-/*------------------------------------------------------ 
-# Custom Styles File for Home Page of Login System App #
--------------------------------------------------------*/
-
+/*--------------------------------------------------------- 
+# Custom Styles File for Contact Page of Login System App #
+----------------------------------------------------------*/
 /*---------------------------------------- 
 # Definition of Custom Variables in root
 # Pseudo Class 
@@ -18,11 +17,12 @@
   --navbar-navlink-focus-color-lg: white;
   --navbar-navlink-focus-outline-color-lg: white;
   --navbar-navlink-hover-color: white;
+  --path-tracking-bar-bg-color: rgb(38, 41, 54);
+  --btn-submit-text-color: white;
   --h1-font-size: 1rem;
   --h1-font-weight: 700;
   --h1-color: white;
   --text-selection-color: white;
-  --btn-find-text-color: white;
   --footer-bg-color: rgb(38, 41, 54);
 }
 /*----------------------------------------- 
@@ -53,6 +53,9 @@ h1 {
   --bs-border-color: var(--main-color);
   box-shadow: 0 0 0 0;
   outline: 0;
+}
+.gy-custom {
+  --bs-gutter-y: 0.625rem;
 }
 /*----------------------------------------- 
 # Nav Bar Section Styles  
@@ -111,129 +114,101 @@ h1 {
   --bs-nav-link-padding-y: 1.25rem;
 }
 /*----------------------------------------- 
-# Hero Section Styles  
+# Path Tracking Bar Section Styles  
 ------------------------------------------*/
-#hero {
-  background-image: url(./../image/banner.png);
-  background-position: left center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-height: 21.875rem;
-  height: 21.875rem;
-  position: relative;
+#path-tracking-bar > .container > div {
+  background-color: rgb(38, 41, 54);
+  padding-block: 1.25rem;
+  padding-inline: 1.875rem;
+  height: 3.7188rem;
 }
-#hero #location-seacrh {
+#path-tracking-bar > .container > div > a {
+  color: rgb(191, 193, 200);
+  font-size: 13px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.5s text-decoration;
+}
+#path-tracking-bar > .container > div > a:hover {
+  text-decoration: underline;
+}
+#path-tracking-bar > .container > div > a span {
+  margin-inline: 0.625rem;
+  color: rgba(191, 193, 200, 0.2);
+}
+#path-tracking-bar > .container > div > a + span {
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+/*----------------------------------------- 
+# Contact Form Section Styles  
+------------------------------------------*/
+#contact-form {
+  padding-block: 4.375rem;
+}
+#contact-form .contact-form-left {
+  background-color: rgb(38, 41, 54);
+}
+#contact-form .contact-form-left iframe {
+  max-height: 13.75rem;
+  height: 13.75rem;
+}
+#contact-form .contact-form-left article {
   padding: 1.25rem;
-  height: 3.5rem;
-  max-height: 3.5rem;
-  position: relative;
-  top: 4.375rem;
-  background-color: var(--bg-color);
-  color: white;
-  outline: none;
 }
-#hero .btn-find {
-  --bs-btn-color: var(--btn-find-text-color);
+#contact-form .contact-form-left article ul li:first-child img {
+  width: 1.875rem;
+  height: 1.1875rem;
+  padding-right: 1.125rem;
+}
+#contact-form .contact-form-left article ul li:last-child {
+  column-gap: 1.25rem;
+}
+#contact-form .contact-form-left article ul li:last-child div:first-child img {
+  width: 1.8125rem;
+  height: 1.1875rem;
+  padding-right: 0.625rem;
+}
+#contact-form .contact-form-left article ul li:last-child div:last-child img {
+  width: 1.625rem;
+  height: 0.75rem;
+  padding-right: 0.625rem;
+}
+#contact-form .contact-form-left article ul li:last-child a {
+  color: white;
+}
+#contact-form .contact-form-right input {
+  padding: 0.9375rem;
+  border: solid 0.125rem rgb(57, 60, 72);
+  outline: none;
+  transition: 0.5s border-color;
+}
+#contact-form .contact-form-right input:focus,
+#contact-form .contact-form-right input:hover {
+  border-color: var(--main-color);
+}
+#contact-form .contact-form-right textarea {
+  padding: 0.9375rem;
+  border: solid 0.125rem rgb(57, 60, 72);
+  min-height: 9.375rem;
+  outline: none;
+  transition: 0.5s border-color;
+}
+#contact-form .contact-form-right textarea:focus,
+#contact-form .contact-form-right textarea:hover {
+  border-color: var(--main-color);
+}
+#contact-form .contact-form-right .btn-submit {
+  --bs-btn-color: var(--btn-submit-text-color);
   --bs-btn-bg: var(--main-color);
   --bs-btn-hover-bg: var(--main-color);
-  --bs-btn-font-size: var(--body-text-size);
-  --bs-btn-padding-x: 2.5rem;
-  --bs-btn-padding-y: 0;
+  --bs-btn-font-size: var(--body-text-color);
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.625rem;
   --bs-btn-border-width: 0;
   --bs-btn-active-bg: var(--main-color);
   max-height: 2.875rem;
   height: 2.875rem;
-  position: absolute;
-  right: 1rem;
-  top: 4.6875rem;
-}
-/*----------------------------------------- 
-# Weather Forecast table Section Styles  
-------------------------------------------*/
-#weather-forecast-table {
-  margin-top: -150px;
-}
-#weather-forecast-table .container > .row {
-  background-color: rgb(50, 53, 68);
-  margin-bottom: 3.125rem;
-}
-#weather-forecast-table #today-weather header {
-  background-color: rgb(45, 48, 61);
-  color: RGB(191, 193, 200);
-  padding: 0.625rem;
-}
-#weather-forecast-table #today-weather article {
-  background-color: rgb(50, 53, 68);
-  padding-inline: 1.25rem;
-  padding-block: 1.875rem;
-}
-#weather-forecast-table #today-weather article #location {
-  font-size: 1.125rem;
-  color: RGB(191, 193, 200);
-}
-#weather-forecast-table #today-weather #first-day-temp {
-  font-size: 5.625rem;
-  font-weight: 700;
-}
-#weather-forecast-table article .condition {
-  display: block;
-  margin-block: 1.25rem;
-  color: var(--main-color);
-  font-weight: 300;
-}
-#weather-forecast-table #today-weather #humidity-wind-compass figure {
-  margin-right: 1.25rem;
-  display: flex;
-}
-#weather-forecast-table #today-weather #humidity-wind-compass img {
-  width: 1.3125rem;
-  height: 1.3125rem;
-  margin-right: 0.3125rem;
-}
-#weather-forecast-table #tomorrow-weather {
-  background-color: rgb(38, 41, 54);
-  height: 100%;
-}
-#weather-forecast-table #tomorrow-weather header,
-#weather-forecast-table #day-after-tomorrow-weather header {
-  background-color: rgb(34, 37, 48);
-  color: RGB(191, 193, 200);
-  padding: 0.625rem;
-}
-#weather-forecast-table #tomorrow-weather article {
-  padding-inline: 1.25rem;
-  padding-block: 3.125rem 0.625rem;
-}
-#weather-forecast-table #tomorrow-weather article figure,
-#weather-forecast-table #day-after-tomorrow-weather article figure {
-  margin-bottom: 1.25rem;
-}
-#weather-forecast-table #tomorrow-weather article #second-day-ht,
-#weather-forecast-table #day-after-tomorrow-weather article #third-day-ht {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-#weather-forecast-table #tomorrow-weather article #second-day-lt,
-#weather-forecast-table #day-after-tomorrow-weather article #third-day-lt {
-  color: RGB(191, 193, 200);
-  font-size: 1rem;
-  font-weight: 300;
-}
-#weather-forecast-table #day-after-tomorrow-weather header {
-  background-color: rgb(45, 48, 61);
-}
-#weather-forecast-table #day-after-tomorrow-weather article {
-  padding-inline: 1.25rem;
-  padding-block: 3.125rem 0.625rem;
-}
-#weather-forecast-table .first-day-condition-img {
-  width: 5.625rem;
-  height: 5.625rem;
-}
-#weather-forecast-table .second-day-condition-img,
-#weather-forecast-table .third-day-condition-img {
-  width: 4rem;
-  height: 4rem;
 }
 /*----------------------------------------- 
 # Footer Section Styles  
@@ -250,7 +225,7 @@ h1 {
   background-color: var(--bg-color);
 }
 #footer .btn-subscribe {
-  --bs-btn-color: var(--btn-find-text-color);
+  --bs-btn-color: var(--btn-submit-text-color);
   --bs-btn-bg: var(--main-color);
   --bs-btn-hover-bg: var(--main-color);
   --bs-btn-font-size: var(--body-text-size);
